@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular_learn';
+  name: string = 'baran';
+  isUser: boolean = false;
+  createDate: Date = new Date();
+  names:string[]= ['baran','siva','kumar'];
+  isUsers:boolean[]=[true,false,true];
+  
 }
