@@ -17,6 +17,8 @@ import { NgSwitchComponent } from './directives/ng-switch/ng-switch.component';
 import { NgClassComponent } from './directives/ng-class/ng-class.component';
 import { NgStyleComponent } from './directives/ng-style/ng-style.component';
 import { NgModelComponent } from './directives/ng-model/ng-model.component';
+import { PipeComponent } from './pipes/pipe/pipe.component';
+import { UpperPipe } from './pipes/upper.pipe';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { NgModelComponent } from './directives/ng-model/ng-model.component';
     NgSwitchComponent,
     NgClassComponent,
     NgStyleComponent,
-    NgModelComponent
+    NgModelComponent,
+    PipeComponent,
+    UpperPipe
   ],
   imports: [
     BrowserModule,
