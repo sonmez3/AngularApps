@@ -1,0 +1,11 @@
+<p>ng-model component!</p>
+
+<input type="text" [ngModel]="name" (ngModelChange)="name=$event">
+<p>{{name}}</p>
+
+<!--
+    //KISA YOL
+    <input type="text" [(ngModel)]="name">
+<p>name: {{name}}</p>
+
+-->

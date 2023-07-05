@@ -1,0 +1,27 @@
+<p>ngfor component!</p>
+
+<h3>isimler</h3>
+<div *ngFor="let item of names">{{item}}</div>
+
+<h3>users</h3>
+<div *ngFor="let user of userList">{{user.id}} - {{user.name}} - {{user.email}}</div>
+
+
+<h3>users(table)</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of userList">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+        </tr>
+    </tbody>
+</table>
