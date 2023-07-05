@@ -1,7 +1,22 @@
 <form  #saveForm="ngForm"  (ngSubmit)="save(saveForm)">
 
 <label for="userName">UserName :</label>
-<input type="text" name="userName2" [ngModel]="loginModel.userName">
+<input #usernameInput="ngModel" type="text" name="userName2" [ngModel]="loginModel.userName">
+<div style="border: 1px solid red; padding: 10px;">
+    <ul>
+        <li>Valid :{{usernameInput.valid}}</li>
+        <li>inValid :{{usernameInput.invalid}}</li>
+        <li>errors :{{usernameInput.errors}}</li>
+        <li>dirty :{{usernameInput.dirty}}</li>
+        <li>touched :{{usernameInput.touched}}</li>
+        <li>untouched :{{usernameInput.untouched}}</li>
+        <li>value :{{usernameInput.value}}</li>
+
+    </ul>
+
+</div>
+
+
 <br>
 <label for="password">Password :</label>
 <input type="password" name="password2" [ngModel]="loginModel.password">
