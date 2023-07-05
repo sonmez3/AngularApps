@@ -1,11 +1,23 @@
 <form  #saveForm="ngForm"  (ngSubmit)="save(saveForm)">
 
 <label for="userName">UserName :</label>
-<input type="text" name="userName" id="userName" ngModel>
+<input type="text" name="userName2" [ngModel]="loginModel.userName">
 <br>
 <label for="password">Password :</label>
-<input type="password" name="password" id="password" ngModel>
+<input type="password" name="password2" [ngModel]="loginModel.password">
 <br>
+<label for="remmemberMe2">remmemberMe :</label>
+<input type="checkbox" name="remmemberMe2" [ngModel]="loginModel.remmemberMe">
+<br>
+<label for="country2">country :</label>
+<select name="country2"  [ngModel]="loginModel.country">
+    <option value="0">choose</option>
+    <option value="1">Türkiye</option>
+    <option value="2">Germany</option>
+    <option value="3">USA</option>
+</select>
+<br>
+
 <button type="submit" >Giriş </button>
 
 

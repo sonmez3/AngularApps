@@ -8,9 +8,32 @@ import { NgForm } from '@angular/forms';
 })
 export class TemplateDrivenComponent {
 
+  loginModel:LoginModel;
+
+   //loginModelC:LoginModelC;
+
+  constructor(){
+    this.loginModel = {userName:"",password:"",remmemberMe:false, country:0};
+    //this.loginModelC=new LoginModelC();
+  }
+
   save(form:NgForm)
   {
     console.log(form.value);
   }
 
 }
+
+interface LoginModel{
+  userName:string;
+  password:string;
+  remmemberMe:boolean;
+  country:number;
+
+}
+
+// class LoginModelC{
+//   userName?:string;
+//   password?:string;
+//   remmemberMe?:boolean;
+// }
