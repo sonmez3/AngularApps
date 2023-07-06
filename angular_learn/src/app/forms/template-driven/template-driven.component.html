@@ -1,7 +1,20 @@
+
+<div class="alert alert-primary" role="alert">
+    A simple primary alert—check it out!
+  </div>
+
+
+
 <form  #saveForm="ngForm"  (ngSubmit)="save(saveForm)">
 
 <label for="userName">UserName :</label>
-<input #usernameInput="ngModel" type="text" name="userName2" [ngModel]="loginModel.userName">
+<input #usernameInput="ngModel" type="text" name="userName2" [ngModel]="loginModel.userName" required> 
+
+<div *ngIf="usernameInput.invalid && (usernameInput.dirty || usernameInput.touched)" >
+    <small style="color: red;" *ngIf="usernameInput.errors?.['required']"> yazmak zorunludur</small>
+</div>
+
+
 <div style="border: 1px solid red; padding: 10px;">
     <ul>
         <li>Valid :{{usernameInput.valid}}</li>
